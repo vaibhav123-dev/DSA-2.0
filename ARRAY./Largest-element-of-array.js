@@ -4,6 +4,7 @@ let arr = [2,1,9,11,0]
 let n = arr.length
 
 // 1> Brute force approach T.C-(O(NLogN)) S.C-O(1)
+
 // sort the arr in ascending order and return last element to get largest element.
 
 function getLargest(arr, n){
@@ -14,6 +15,7 @@ return arr[n-1]
 
 
 //2> Optimal solution T.C-(O(N)) S.C-O(1)
+
 // Inialize the variable with first element of arr as 'large'
 // Update that variable (if curr element of arr is > 'large' variable) 
 

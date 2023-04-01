@@ -4,6 +4,7 @@ let arr = [1,4,3,7,5]
 let n = arr.length
 
 // 1> Brute force approach T.C-(O(NLogN + N)) S.C-O(1)
+
 // sort the arr in ascending order and get last element to get first largest element.
 // then again run a loop and compare it with first largest and update sLargest variable.
 
@@ -24,6 +25,7 @@ function getSecondLargest(arr,n){
 
 
 //2> Better solution T.C-(O(N + N)) S.C-O(1)
+
 // Inialize the variable with first element of arr as 'large'.
 // Update that variable (if curr element of arr is > 'large' variable) to get first largest.
 
@@ -47,6 +49,7 @@ function getSecondLargest(arr,n){
 
 
 //3> Optimal solution T.C-(O(N)) S.C-O(1)
+
 // Inialize the variable with first element of arr as 'large'.
 // Update that variable (if curr element of arr is > 'large' variable) to get first largest at the same time update sLargest with fLargest.
 // also check if curr element is less than flargest and greater than slargest.
