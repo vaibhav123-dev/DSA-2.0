@@ -8,14 +8,14 @@ Input: arr = [1,1,2]
 Output: 2, arr = [1,2,_]
 
 
-// 1> Brute force approach T.C-(O(N + N)) S.C-O(N)
+// 1> Brute force approach T.C-(O(NLogN + N)) S.C-O(N)
 
 // Our set can be initiated with the arr array. This will automatically remove all duplicates. We then set arr.length to 0 which will empty the array accordingly.
 // We do NOT use arr = [] as this would create a new object in memory and we want to empty the existing arr array.
 // Finally, we use the spread operator to push our set values into the original array.
 
 function checkIfSorted(arr, n){
-    let set = new Set(arr)         // T.C - O(N)
+    let set = new Set(arr)         // T.C - O(NLogN)
     arr.length = 0
     arr.push(...set.values())      // T.C - O(N)
     return arr.length;
