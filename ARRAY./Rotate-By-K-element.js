@@ -8,7 +8,6 @@ let k = 3
 
 // 1> Brute force approach T.C-(O(n + k)) S.C-O(k)
 
-rotateByK(arr,n,k)
 function rotateByK(arr, n, k){
     let temp = [];
     for(let i=0; i<k; i++){         //put all the rotatable element in temp  T.C - O(k)
@@ -22,8 +21,7 @@ function rotateByK(arr, n, k){
     for(let i=n-k; i<n; i++){
         arr[i] = temp[i-(n-k)]         // putting back temp element to arr  T.C - O(k)
     }
-    
-console.log(arr)
+    return arr
 }
 
 
