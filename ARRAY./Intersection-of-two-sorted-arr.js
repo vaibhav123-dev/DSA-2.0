@@ -27,7 +27,7 @@ function unionOfArray(arr1,arr2){
 
 
 
-//2> Optimal solution T.C-(O(N + M)) S.C-O(N + M)
+//2> Optimal solution T.C-(O(N + M)) S.C-O(1)     --> if we not consider ans space
 
 function unionOfArray(arr1,arr2, n){  
  let n = arr1.length;
@@ -36,33 +36,16 @@ function unionOfArray(arr1,arr2, n){
  let j=0
 let ans = []
 
- while(i<n && j<m){                                                 //T.C - O(N + M)
-    if(arr[i] <= arr[j]){
-        if(ans.length == 0 && ans[ans.length-1] != arr[i]){         // compare ith element in first arr wiht jth of second and put it into ans arr acc condition.
-            ans.push(arr[i])                                        
-        }                                                           
-        i++;
-    }else{
-         if(ans.length == 0 && ans[ans.length-1] != arr[j]){           // compare ith element in first arr wiht jth of second and put it into ans arr acc condition.
-            ans.push(arr[j])
-        }
+ while(i<n && j<m){                 //T.C - O(N + M)
+    if(arr1[i] < arr2[j]){          //if first arr element is small than second arr element then i++
+        i++;        
+    }else if(arr2[j] < arr1[i]){    //if second arr element is small than first arr element then j++
         j++;
+    }else{
+        ans.push(arr1[i])            // if both element matches then just push any of in ans arr
+        i++
+        j++
     }
  }
-
- while(i<n){
-        if(ans.length == 0 && ans[ans.length-1] != arr[i]){                //push rest of the element if present
-            ans.push(arr[i])
-        }
-        i++;
- }
-
- while(j<m){
-         if(ans.length == 0 && ans[ans.length-1] != arr[j]){                //push rest of the element if present
-            ans.push(arr[j])
-        }
-        j++;
- }
-
  return ans
 }
