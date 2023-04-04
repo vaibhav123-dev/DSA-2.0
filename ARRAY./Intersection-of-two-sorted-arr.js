@@ -7,7 +7,7 @@ Output: [3,4,5]
 
 // 1> Brute force approach T.C-(O(N + M) S.C-O(M) -->>{space complexity depends on which arr length you use for visited arr}.
 
-function unionOfArray(arr1,arr2){
+function intersectionOfArray(arr1,arr2){
     let visitedArr = new Array(arr2.length).fill(0)
     let ansArr = []
     for(let i=0; i<arr1.length; i++){                   //  Running loop on first arr for fixing element T.C - O(n1)
@@ -29,7 +29,7 @@ function unionOfArray(arr1,arr2){
 
 //2> Optimal solution T.C-(O(N + M)) S.C-O(1)     --> if we not consider ans space
 
-function unionOfArray(arr1,arr2, n){  
+function intersectionOfArray(arr1,arr2, n){  
  let n = arr1.length;
  let m = arr2.length;
  let i=0; 
