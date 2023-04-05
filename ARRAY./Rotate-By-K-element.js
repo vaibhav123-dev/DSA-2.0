@@ -36,7 +36,7 @@ function rotateByK(arr, n, k){
 }
 
 function reverseHelperFun(arr, start, end){
-    if(start <= end){
+    while(start <= end){
         let temp = arr[start]
         arr[start] = arr[end]
         arr[end] = temp
