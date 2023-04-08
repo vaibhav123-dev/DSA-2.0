@@ -17,7 +17,7 @@ function intersectionOfArray(arr1,arr2){
                 visitedArr[j] = 1                              // after picking of element just update that index value on visited arr
                 break;
             }
-            if(arr2[j] > arr1[i]){                      // if element of first arr is greater than 2nd arr element then break 
+            if(arr2[j] > arr1[i]){                      // if element of seconde arr is greater than first arr element then break 
                 break;                                  // because after that no need to check further
             }
         }
