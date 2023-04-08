@@ -14,7 +14,7 @@ Output: 2, arr = [1,2,_]
 // We do NOT use arr = [] as this would create a new object in memory and we want to empty the existing arr array.
 // Finally, we use the spread operator to push our set values into the original array.
 
-function checkIfSorted(arr, n){
+function numOFUnique(arr, n){
     let set = new Set(arr)         // T.C - O(NLogN)
     arr.length = 0
     arr.push(...set.values())      // T.C - O(N)
@@ -29,7 +29,7 @@ function checkIfSorted(arr, n){
 // will put left pointer on 0th index and right pointer on right and iterate right pointer further.
 // And check if arr[right] is unique then replace arr[left+1] with arr[right] and move left with +1.
 
-function checkIfSorted(arr){
+function numOFUnique(arr){
        let left = 0;
     for (let right = 0; right < arr.length; right++){
         if(arr[right]!=arr[left]){
